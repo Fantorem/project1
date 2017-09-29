@@ -1,2 +1,3 @@
-# project1
-fakfkagkgl
+Projet C++ 
+
+Forian/Rémy
