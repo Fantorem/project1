@@ -99,40 +99,24 @@ int main()
             cin >> pile;
         }
         else{
-            srand(time(NULL));
             robotChoicePile=rand()%MAXPILE+1;
             switch(robotChoicePile){
                 case 1:{
                     pile='A';
                     if(A!=0){
-                        srand(time(NULL));
                         retirBato=rand()%A+1;
-                        while(retirBato==0){
-                            srand(time(NULL));
-                            retirBato=rand()%A+1;
-                        }
                     }
                 } break;
                 case 2:{
                     pile='B';
                     if(B!=0){
-                        srand(time(NULL));
                         retirBato=rand()%B+1;
-                        while(retirBato==0){
-                            srand(time(NULL));
-                            retirBato=rand()%B+1;
-                        }
                     }
                 } break;
                 case 3:{
                     pile='C';
                     if(C!=0){
-                        srand(time(NULL));
                         retirBato=rand()%C+1;
-                        while(retirBato==0){
-                            srand(time(NULL));
-                            retirBato=rand()%C+1;
-                        }
                     }
                 } break;
             }
@@ -248,7 +232,6 @@ int main()
             // Vérification de Victoire :
 
             if (A==0 && B==0 && C==0){
-                //win=win+1;
                 if (player==player1){
                     winPlayer1=winPlayer1+1;
                     win=winPlayer1;
@@ -276,7 +259,7 @@ int main()
                     cin >> maxVal;
                 }
                 cptRobot=0;
-                srand(time(NULL));
+                cptPlayer=0;
                 A=rand()%maxVal + 1;
                 B=rand()%maxVal + 1;
                 C=rand()%maxVal + 1;
